@@ -1,0 +1,12 @@
+@startuml Decorator
+
+interface Curso <<interface>>
+class CursoGraduacao implements Curso
+abstract class CursoDecorator <<abstract>> implements Curso
+class AtividadesComplementares extends CursoDecorator
+class Estagio extends CursoDecorator
+class TrabalhoConclusaoCurso extends CursoDecorator
+
+CursoDecorator ..> "1" Curso
+
+@enduml
