@@ -1,12 +1,12 @@
 @startuml Decorator
 
-interface Curso <<interface>>
-class CursoGraduacao implements Curso
-abstract class CursoDecorator <<abstract>> implements Curso
-class AtividadesComplementares extends CursoDecorator
-class Estagio extends CursoDecorator
-class TrabalhoConclusaoCurso extends CursoDecorator
+interface IPaciente <<interface>>
+class Paciente implements IPaciente
+abstract class PacienteDecorator <<abstract>> implements IPaciente
+class Diabetes extends PacienteDecorator
+class ProblemasCardiacos extends PacienteDecorator
+class Alergias extends PacienteDecorator
 
-CursoDecorator ..> "1" Curso
+PacienteDecorator ..> "1" IPaciente
 
 @enduml
